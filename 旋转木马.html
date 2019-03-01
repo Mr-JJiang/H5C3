@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    body{
+        perspective: 1500px;
+    }
+    ul{
+        width: 160px;
+        height: 200px;
+        list-style: none;
+        position: relative;
+        margin: 200px auto;
+        /* background-color: #000; */
+        transform-style: preserve-3d;
+        animation: move 20s infinite
+    }
+    li{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+    li:nth-child(1){
+        background: url("./images/girl1.jpg") no-repeat top left/cover;
+        transform: translateZ(500px)
+    }
+    li:nth-child(2){
+        background: url("./images/girl2.jpg") no-repeat top left/cover;
+        transform: rotateY(72deg) translateZ(500px)
+    }
+    li:nth-child(3){
+        background: url("./images/girl3.jpg") no-repeat top left/cover;
+        transform: rotateY(144deg) translateZ(500px)
+    }
+    li:nth-child(4){
+        background: url("./images/girl4.jpg") no-repeat top left/cover;
+        transform: rotateY(216deg) translateZ(500px)
+    }
+    li:nth-child(5){
+        background: url("./images/girl5.jpg") no-repeat top left/cover;
+        transform: rotateY(288deg) translateZ(500px)
+    }
+    li:nth-child(6){
+        background: url("./images/girl1.jpg") no-repeat top left/cover;
+        /* transform: rotateY(288deg) translateZ(500px) */
+    }
+
+    @keyframes move{
+        form{}
+        to{
+            transform: rotateY(360deg);
+        }
+    }
+
+    ul:hover{
+        animation-play-state: paused;
+    }
+    </style>
+</head>
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>
